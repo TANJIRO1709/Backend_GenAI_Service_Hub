@@ -2,7 +2,7 @@ import express from "express";
 import { config } from "dotenv";
 import jsonParser from "./middlewares/jsonParser.js";
 import corsConfig from "./middlewares/cors.js";
-import makeadreamAi from "./routes/makeadreamAi.js"
+import serviceHubAi from "./routes/serviceHubAi.js"
 
 const app = express();
 config();
@@ -11,11 +11,11 @@ app.use(corsConfig)
 app.use(jsonParser)
 app.get("/", (req, res) => {
     res.send({
-        message: "Project Bluebell Server",
+        message: "Project Service_Hub Server",
         health: "ok",
     });
 });
-app.use("/api/MakeadreamAI", makeadreamAi);
+app.use("/api/ServiceHubAI", serviceHubAi);
 
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);

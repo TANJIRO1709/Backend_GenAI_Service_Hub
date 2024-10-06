@@ -1,5 +1,5 @@
 import express from "express";
-import { getAIResponse } from "../controllers/makeadream.js";
+import { getAIResponse } from "../controllers/serviceHub.js";
 
 const router = express.Router();
 
