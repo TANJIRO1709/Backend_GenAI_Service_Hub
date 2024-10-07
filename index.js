@@ -7,9 +7,9 @@ import serviceHubAi from "./routes/serviceHubAi.js";
 const app = express();
 config();
 
-// Configure CORS
+// Configure CORS to allow all origins
 const corsOptions = {
-  origin: ['http://localhost:3000'], // Allow localhost
+  origin: '*', // Allow all domains
   methods: 'GET,POST,OPTIONS', // Specify allowed methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
 };
